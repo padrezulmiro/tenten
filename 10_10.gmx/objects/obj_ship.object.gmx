@@ -71,14 +71,22 @@ physics_fixture_bind(fix, id);
             <kind>1</kind>
             <string>//Correct ship rotation
 
-
-//Apply gravity assist
-
-pc_grav_assist(soi_colliding);
-
-//Apply gravity
-
-pc_apply_gravity(soi_colliding);
+//Apply gravity assist and gravity with planet
+if soi_colliding {
+    if physics_test_overlap(phy_position_x, 
+                            phy_position_y, 
+                            phy_rotation,
+                            soi_colliding) {
+        
+               
+        pc_grav_assist(soi_colliding);                
+        pc_apply_gravity(soi_colliding);
+        
+    } else {
+        soi_colliding = undefined;
+        add_assist = undefined;
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -130,6 +138,10 @@ add_assist = soi_colliding.PLANET_SPIN == -1;
             keyboard_check(vk_left),
             keyboard_check(vk_right)
             )
+            
+//Restart room with 'R'
+
+if keyboard_check(ord('R')) room_restart();
                 
 
 </string>
