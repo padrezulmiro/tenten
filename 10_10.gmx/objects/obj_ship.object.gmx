@@ -27,11 +27,11 @@
             <kind>1</kind>
             <string>//Init instance constants
 
-FRONT_THRUSTER = 30;
-SIDE_THRUSTER = 15;
+FRONT_THRUSTER = 25;
+SIDE_THRUSTER = 25;
 DENSITY = 1;
 FUEL = 100;
-LINEAR_DAMPING = 0.5;
+LINEAR_DAMPING = 0.01;
 ANGULAR_DAMPING = 4;
 
 //Init instance vars
@@ -43,9 +43,41 @@ soi_colliding = undefined;
 fix = physics_fixture_create();
 physics_fixture_set_box_shape(fix, sprite_width/2, sprite_height/2);
 physics_fixture_set_density(fix, DENSITY);
-physics_fixture_set_linear_damping(fix, LINEAR_DAMPING)
-physics_fixture_set_angular_damping(fix, ANGULAR_DAMPING)
+physics_fixture_set_linear_damping(fix, LINEAR_DAMPING);
+physics_fixture_set_angular_damping(fix, ANGULAR_DAMPING);
 physics_fixture_bind(fix, id);
+
+//Set alarms (read description for each alarm)
+
+alarm_set(0, 10); //for pc_draw_breadcrumb
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Draw breadcrumbs' alarm
+
+pc_create_breadcrumb();
+
+alarm_set(0, 20);
 
 </string>
           </argument>
@@ -80,7 +112,7 @@ if soi_colliding {
         
                
         pc_grav_assist(soi_colliding);                
-        //pc_apply_gravity(soi_colliding);
+        pc_apply_gravity(soi_colliding);
         
     } else {
         soi_colliding = undefined;

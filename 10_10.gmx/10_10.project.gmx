@@ -9,6 +9,7 @@
     <sprite>sprites\spr_ship</sprite>
     <sprite>sprites\spr_light_planet</sprite>
     <sprite>sprites\spr_light_grav_soi</sprite>
+    <sprite>sprites\spr_breadcrumb</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -21,6 +22,7 @@
     <script>scripts\pc_grav_assist.gml</script>
     <script>scripts\pc_apply_gravity.gml</script>
     <script>scripts\pc_angular_drag.gml</script>
+    <script>scripts\pc_create_breadcrumb.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_ship</object>
@@ -29,6 +31,7 @@
     <object>objects\obj_grav_soi</object>
     <object>objects\obj_planet</object>
     <object>objects\obj_pc</object>
+    <object>objects\obj_breadcrumb</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\r_test_1</room>
