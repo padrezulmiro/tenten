@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>//Init instance constants
 
-FRONT_THRUSTER = 40;
-SIDE_THRUSTER = 10;
+FRONT_THRUSTER = 30;
+SIDE_THRUSTER = 15;
 DENSITY = 1;
 FUEL = 100;
 LINEAR_DAMPING = 0.5;
@@ -80,7 +80,7 @@ if soi_colliding {
         
                
         pc_grav_assist(soi_colliding);                
-        pc_apply_gravity(soi_colliding);
+        //pc_apply_gravity(soi_colliding);
         
     } else {
         soi_colliding = undefined;
@@ -143,7 +143,9 @@ add_assist = soi_colliding.PLANET_SPIN == -1;
 
 if keyboard_check(ord('R')) room_restart();
                 
+//TEMP correct rotation with 'C'
 
+if keyboard_check(ord('C')) pc_angular_drag()
 </string>
           </argument>
         </arguments>

@@ -30,7 +30,7 @@
 //Init instance vars
 PLANET_GRAVITY = 45;
 PLANET_SPIN = -1; // -1 -&gt; Up || 1 -&gt; Down
-ASSIST_VELOCITY = 5; // momentum transferred to the ship
+ASSIST_VELOCITY = 0.1; // momentum transferred to the ship
 </string>
           </argument>
         </arguments>

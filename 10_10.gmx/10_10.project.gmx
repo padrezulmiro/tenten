@@ -20,6 +20,7 @@
     <script>scripts\get_resultant_force_y.gml</script>
     <script>scripts\pc_grav_assist.gml</script>
     <script>scripts\pc_apply_gravity.gml</script>
+    <script>scripts\pc_angular_drag.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_ship</object>
