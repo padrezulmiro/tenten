@@ -32,6 +32,7 @@
     <object>objects\obj_planet</object>
     <object>objects\obj_pc</object>
     <object>objects\obj_breadcrumb</object>
+    <object>objects\obj_main</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\r_test_1</room>

@@ -28,11 +28,11 @@
             <string>//Init instance constants
 
 FRONT_THRUSTER = 25;
-SIDE_THRUSTER = 25;
+SIDE_THRUSTER = 60;
 DENSITY = 1;
 FUEL = 100;
 LINEAR_DAMPING = 0.01;
-ANGULAR_DAMPING = 4;
+ANGULAR_DAMPING = 9;
 
 //Init instance vars
 

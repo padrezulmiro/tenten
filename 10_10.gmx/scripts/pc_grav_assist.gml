@@ -1,10 +1,5 @@
 ///pc_grav_assist(colliding_id)
 
-/*
-TODO Assuming a "thyphoon" kind of planet, then the vector v(ga) must be perpendicular 
-     to the vector linking the ship and the planet's center-of-mass
-*/
-
 var col_id = argument0;
 var dir_planet = point_direction(phy_com_x, 
                                  phy_com_y, 
