@@ -37,6 +37,7 @@
   <rooms name="rooms">
     <room>rooms\r_test_1</room>
     <room>rooms\r_test_2</room>
+    <room>rooms\r_menu</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
