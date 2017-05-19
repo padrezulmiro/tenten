@@ -37,6 +37,7 @@ ANGULAR_DAMPING = 9;
 //Init instance vars
 
 soi_colliding = undefined;
+planet_colliding = undefined;
 fuel = INIT_FUEL;
 
 //Create and bind phy fixture
@@ -130,6 +131,35 @@ if soi_colliding {
         add_assist = undefined;
     }
 }
+
+//Planet Collision
+
+if planet_colliding {
+    scr_game_over();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_planet">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>planet_colliding = other.id;
 </string>
           </argument>
         </arguments>

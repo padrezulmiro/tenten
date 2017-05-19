@@ -23,6 +23,7 @@
     <script>scripts\pc_apply_gravity.gml</script>
     <script>scripts\pc_angular_drag.gml</script>
     <script>scripts\pc_create_breadcrumb.gml</script>
+    <script>scripts\scr_game_over.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_ship</object>
