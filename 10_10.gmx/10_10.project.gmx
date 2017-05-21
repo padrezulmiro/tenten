@@ -9,6 +9,7 @@
     <sprite>sprites\spr_ship</sprite>
     <sprite>sprites\spr_light_planet</sprite>
     <sprite>sprites\spr_light_grav_soi</sprite>
+    <sprite>sprites\spr_end_target</sprite>
     <sprite>sprites\spr_breadcrumb</sprite>
   </sprites>
   <backgrounds name="background"/>
@@ -34,10 +35,11 @@
     <object>objects\obj_pc</object>
     <object>objects\obj_breadcrumb</object>
     <object>objects\obj_main</object>
+    <object>objects\obj_end_target</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\r_test_1</room>
     <room>rooms\r_test_2</room>
+    <room>rooms\r_test_1</room>
     <room>rooms\r_menu</room>
   </rooms>
   <help>

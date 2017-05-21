@@ -56,6 +56,7 @@
     <instance objName="obj_grav_soi_light" x="640" y="288" name="inst_E46B7175" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_planet_light" x="320" y="288" name="inst_823C1CD7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_planet_light" x="640" y="288" name="inst_B338AD7E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_end_target" x="1024" y="352" name="inst_D58216D5" locked="0" code="" scaleX="0.699999988079071" scaleY="0.699999988079071" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>-1</PhysicsWorld>
