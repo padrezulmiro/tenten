@@ -36,6 +36,7 @@
     <object>objects\obj_breadcrumb</object>
     <object>objects\obj_main</object>
     <object>objects\obj_end_target</object>
+    <object>objects\obj_timer</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\r_test_2</room>
