@@ -30,7 +30,6 @@
 FRONT_THRUSTER = 25;
 SIDE_THRUSTER = 80;
 DENSITY = 1;
-INIT_FUEL = 100;
 LINEAR_DAMPING = 0;
 ANGULAR_DAMPING = 9;
 
@@ -39,7 +38,6 @@ ANGULAR_DAMPING = 9;
 soi_colliding = undefined;
 planet_colliding = undefined;
 end_target_colliding = undefined;
-fuel = INIT_FUEL;
 
 //Create and bind phy fixture
 
@@ -112,7 +110,7 @@ alarm_set(0, 20);
           <argument>
             <kind>1</kind>
             <string>//Show remaining fuel
-show_debug_message(string(fuel));
+show_debug_message(string(global.fuel));
 
 //Correct ship rotation
 
@@ -248,6 +246,48 @@ if keyboard_check(ord('R')) room_restart();
 
 if keyboard_check(ord('C')) pc_angular_drag()
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>scr_init_vars</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>

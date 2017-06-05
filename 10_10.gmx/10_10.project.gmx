@@ -25,6 +25,7 @@
     <script>scripts\pc_angular_drag.gml</script>
     <script>scripts\pc_create_breadcrumb.gml</script>
     <script>scripts\scr_game_over.gml</script>
+    <script>scripts\scr_init_vars.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_ship</object>
@@ -37,6 +38,7 @@
     <object>objects\obj_main</object>
     <object>objects\obj_end_target</object>
     <object>objects\obj_timer</object>
+    <object>objects\obj_fuel</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\r_test_2</room>
