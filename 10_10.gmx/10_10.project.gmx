@@ -11,6 +11,7 @@
     <sprite>sprites\spr_light_grav_soi</sprite>
     <sprite>sprites\spr_end_target</sprite>
     <sprite>sprites\spr_breadcrumb</sprite>
+    <sprite>sprites\spr_liftoff_planet</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
