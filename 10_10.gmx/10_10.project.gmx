@@ -13,7 +13,9 @@
     <sprite>sprites\spr_breadcrumb</sprite>
     <sprite>sprites\spr_liftoff_planet</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bck_space</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\time_scale.gml</script>
@@ -27,6 +29,7 @@
     <script>scripts\pc_create_breadcrumb.gml</script>
     <script>scripts\scr_game_over.gml</script>
     <script>scripts\scr_init_vars.gml</script>
+    <script>scripts\scr_list_insts.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_ship</object>
@@ -36,11 +39,14 @@
     <object>objects\obj_planet</object>
     <object>objects\obj_pc</object>
     <object>objects\obj_breadcrumb</object>
-    <object>objects\obj_main</object>
+    <object>objects\obj_lvl</object>
     <object>objects\obj_end_target</object>
     <object>objects\obj_timer</object>
     <object>objects\obj_fuel</object>
+    <object>objects\obj_liftoff_stage</object>
+    <object>objects\obj_liftoff_drawable</object>
   </objects>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\r_test_2</room>
     <room>rooms\r_test_1</room>

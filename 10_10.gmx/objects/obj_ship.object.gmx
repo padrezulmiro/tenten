@@ -109,10 +109,7 @@ alarm_set(0, 20);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Show remaining fuel
-show_debug_message(string(global.fuel));
-
-//Correct ship rotation
+            <string>//Correct ship rotation
 
 //Apply gravity assist and gravity with planet
 if soi_colliding {

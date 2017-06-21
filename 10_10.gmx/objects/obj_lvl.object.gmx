@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_liftoff_drawable</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,20 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Init instance constants
-
-MAX_TIME = 10000000; //microseconds
-INIT_TIME = get_timer();
-
-//Init instance vars
-
-time_remaining = MAX_TIME;
+            <string>scr_init_vars();
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="1">
+    <event eventtype="7" enumb="4">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -55,37 +48,9 @@ time_remaining = MAX_TIME;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if time_remaining &gt; 0 {
-    time_remaining = MAX_TIME - (get_timer() - INIT_TIME);
-} else time_remaining = 0;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="64">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>var t_secs = floor(time_remaining/1000000);
-var t_millisecs = floor((time_remaining/1000000 - t_secs)*1000);
+            <string>///Liftoff Stage
 
-draw_text_colour(1024, 544, 
-                 string(t_secs) + ':' + string(t_millisecs), 
-                 c_white, c_white, c_white, c_white, 1);
+instance_create(0, 0, obj_liftoff_stage);
 </string>
           </argument>
         </arguments>
