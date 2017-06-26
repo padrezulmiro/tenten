@@ -28,11 +28,14 @@
             <string>//Init instance constants
 
 MAX_TIME = 10000000; //microseconds
-INIT_TIME = get_timer();
+INIT_TIME = undefined;
 
 //Init instance vars
 
 time_remaining = MAX_TIME;
+ship_launched = false;
+
+
 </string>
           </argument>
         </arguments>
@@ -55,9 +58,15 @@ time_remaining = MAX_TIME;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if time_remaining &gt; 0 {
-    time_remaining = MAX_TIME - (get_timer() - INIT_TIME);
-} else time_remaining = 0;
+            <string>with (obj_ship) other.ship_launched = self.launch;
+
+if !INIT_TIME {
+    if ship_launched INIT_TIME = get_timer();
+} else {
+    if time_remaining &gt; 0 {
+        time_remaining = MAX_TIME - (get_timer() - INIT_TIME);
+    } else time_remaining = 0;
+}
 </string>
           </argument>
         </arguments>

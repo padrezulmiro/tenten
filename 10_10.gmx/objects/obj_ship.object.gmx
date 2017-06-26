@@ -38,6 +38,7 @@ ANGULAR_DAMPING = 9;
 soi_colliding = undefined;
 planet_colliding = undefined;
 end_target_colliding = undefined;
+launch = false;
 
 //Create and bind phy fixture
 

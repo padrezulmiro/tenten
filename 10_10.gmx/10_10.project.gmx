@@ -46,7 +46,6 @@
     <object>objects\obj_liftoff_stage</object>
     <object>objects\obj_liftoff_drawable</object>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\r_test_2</room>
     <room>rooms\r_test_1</room>

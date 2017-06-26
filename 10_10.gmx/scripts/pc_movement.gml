@@ -14,7 +14,9 @@ if up {
                             FRONT_THRUSTER*dsin(phy_rotation)
                             );
         global.fuel--;
-    }    
+    }
+    
+    launch = true;    
 }
 
 if left {
