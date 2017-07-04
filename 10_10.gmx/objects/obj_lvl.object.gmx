@@ -68,6 +68,43 @@ instance_create(0, 0, obj_timer);
         </arguments>
       </action>
     </event>
+    <event eventtype="5" enumb="17">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Encode present level into JSON
+
+obj_list = ds_list_create();
+
+with(obj_liftoff_drawable) {
+    var o = ds_map_create();
+    
+    o[? 'obj_type'] = object_get_name(object_index);
+    o[? 'xx'] = x;
+    o[? 'yy'] = y;
+    
+    ds_list_add(other.obj_list, o);        
+}
+
+scr_room_encode("encoded.json", obj_list);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="7" enumb="4">
       <action>
         <libid>1</libid>

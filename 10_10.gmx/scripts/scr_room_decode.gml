@@ -8,8 +8,7 @@ var json_string = "";
 while (!file_text_eof(json_file))
 {
     //Don't the next two commands do pretty much the same?
-    json_string += file_text_read_string(json_file);
-    file_text_readln(json_file);
+    json_string += file_text_readln(json_file);
 }
 
 file_text_close(json_file);

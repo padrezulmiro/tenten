@@ -48,7 +48,7 @@
     <script>scripts\pc_create_breadcrumb.gml</script>
     <script>scripts\scr_game_over.gml</script>
     <script>scripts\scr_init_vars.gml</script>
-    <script>scripts\scr_list_insts.gml</script>
+    <script>scripts\scr_room_encode.gml</script>
     <script>scripts\scr_room_decode.gml</script>
   </scripts>
   <objects name="objects">
