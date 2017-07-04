@@ -140,15 +140,7 @@ if ds_exists(drawable_objs, ds_type_list) {
         var d = drawable_objs[| i];
         var s = object_get_sprite(d[? 'obj_ind']);
         
-        if sprite_exists(s) {    
-            draw_sprite
-            (
-                s,
-                0,
-                d[? 'xx'],
-                d[? 'yy']
-            );
-        }
+        if sprite_exists(s) draw_sprite(s, 0, d[? 'xx'], d[? 'yy']);
     }       
 }
 

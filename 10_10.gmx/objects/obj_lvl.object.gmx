@@ -25,7 +25,81 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_init_vars();
+            <string>///Initializing init parameters
+scr_init_vars();
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Initialize room's instances
+
+//Get room's objects
+var fpath = "room.json";
+var obj_list = scr_room_decode(working_directory + fpath);
+
+for (var i = 0; i &lt; ds_list_size(obj_list); i++) {
+    var o = obj_list[| i];
+    var o_type = asset_get_index(o[? "obj_type"]);
+    instance_create(o[? "xx"], o[? "yy"], o_type);
+}
+//Init timer and fuel bar
+instance_create(0, 0, obj_fuel);
+instance_create(0, 0, obj_timer);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="17">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Encode present level into JSON
+
+obj_list = ds_list_create();
+
+with(obj_liftoff_drawable) {
+    var o = ds_map_create();
+    
+    o[? 'obj_type'] = object_get_name(object_index);
+    o[? 'xx'] = x;
+    o[? 'yy'] = y;
+    
+    ds_list_add(other.obj_list, o);        
+}
+
+scr_room_encode("encoded.json", obj_list);
 </string>
           </argument>
         </arguments>

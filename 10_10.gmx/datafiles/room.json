@@ -1,0 +1,27 @@
+[
+  {
+    "obj_type": "obj_grav_soi_light",
+    "xx": 288,
+    "yy": 448
+  },
+  {
+    "obj_type": "obj_grav_soi_light",
+    "xx": 544,
+    "yy": 256
+  },
+  {
+    "obj_type": "obj_planet_light",
+    "xx": 288,
+    "yy": 448
+  },
+  {
+    "obj_type": "obj_planet_light",
+    "xx": 544,
+    "yy": 256
+  },
+  {
+    "obj_type": "obj_end_target",
+    "xx": 1024,
+    "yy": 96
+  }
+]
