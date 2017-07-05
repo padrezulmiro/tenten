@@ -18,6 +18,7 @@ file = file_text_open_write(working_directory + fname);
 file_text_write_string(file, json_str);
 file_text_close(file);
 
+show_debug_message('Room JSON saved attempted: ' + working_directory + fname);
 
 //Alternate algorithm to write JSON to a file
 

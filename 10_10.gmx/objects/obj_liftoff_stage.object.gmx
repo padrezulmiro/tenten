@@ -31,15 +31,21 @@ START_XX = 64;
 
 drawable_objs = ds_list_create();
 
-with(obj_liftoff_drawable) {
-    var obj = ds_map_create();
-    obj[? 'xx'] = x;
-    obj[? 'yy'] = y;
-    obj[? 'obj_ind'] = object_index;
-    ds_list_add(other.drawable_objs, obj);
-}
+with(obj_lvl) other.l_drawable = self.LIFTOFF_DRAWABLE;
 
-//Stop and choose liftoff location
+//Save liftoff_drawable objs for subsequent drawing
+for(var i=0; i&lt;array_length_1d(l_drawable); i++) {
+    var o_id = asset_get_index(l_drawable[i]);
+     
+    with(o_id) {     
+        var obj = ds_map_create();
+        
+        obj[? 'xx'] = x;
+        obj[? 'yy'] = y;
+        obj[? 'obj_ind'] = object_index;
+        ds_list_add(other.drawable_objs, obj);
+    }
+}
 
 instance_deactivate_all(true);
 

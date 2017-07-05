@@ -64,7 +64,6 @@
     <object>objects\obj_timer</object>
     <object>objects\obj_fuel</object>
     <object>objects\obj_liftoff_stage</object>
-    <object>objects\obj_liftoff_drawable</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room3</room>

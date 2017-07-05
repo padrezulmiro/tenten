@@ -89,17 +89,23 @@ instance_create(0, 0, obj_timer);
 
 obj_list = ds_list_create();
 
-with(obj_liftoff_drawable) {
-    var o = ds_map_create();
+with(obj_lvl) other.l_saveable = self.ROOM_CONF_SAVEABLE;
+
+for (var i=0; i&lt;array_length_1d(l_saveable); i++) {
+    var o_id = asset_get_index(l_saveable[i]);
     
-    o[? 'obj_type'] = object_get_name(object_index);
-    o[? 'xx'] = x;
-    o[? 'yy'] = y;
-    
-    ds_list_add(other.obj_list, o);        
+    with(o_id) {
+        var o = ds_map_create();
+        
+        o[? 'obj_type'] = object_get_name(object_index);
+        o[? 'xx'] = x;
+        o[? 'yy'] = y;
+        
+        ds_list_add(other.obj_list, o);        
+    }
 }
 
-scr_room_encode("encoded.json", obj_list);
+scr_room_encode(room_get_name(room) + "_conf.json", obj_list);
 </string>
           </argument>
         </arguments>
@@ -125,6 +131,31 @@ scr_room_encode("encoded.json", obj_list);
             <string>///Liftoff Stage
 
 instance_create(0, 0, obj_liftoff_stage);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="18">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Testing
+
+show_message(room_get_name(room));
 </string>
           </argument>
         </arguments>
